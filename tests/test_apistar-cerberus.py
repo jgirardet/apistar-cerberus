@@ -5,19 +5,7 @@ import json
 # Third Party Libraries
 import cerberus
 from apistar import App, Route, TestClient
-from apistar_cerberus import CerberusComp
-
-
-class RienValidator(cerberus.Validator):
-    @property  # add __name__ needed by apistar
-    def __name__(self):
-        return repr(self)
-
-    def validate(self, *args,
-                 **kwargs):  #  to disable property at instanciation
-        kwargs['update'] = self._config.get("update", False)
-        super().validate(*args, **kwargs)
-
+from apistar_cerberus import CerberusComp, ApistarValidator
 
 schema = {
     "a": {
@@ -29,8 +17,8 @@ schema = {
     },
 }
 
-RienCerbCreate = RienValidator(schema)
-RienCerbUpdate = RienValidator(schema, update=True)
+RienCerbCreate = ApistarValidator(schema)
+RienCerbUpdate = ApistarValidator(schema, update=True)
 
 
 def helloCerb(rien: RienCerbCreate):
