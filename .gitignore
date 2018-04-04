@@ -75,3 +75,5 @@ AUTHORS
 doc/_build/ 
 
 Pipfile.lock
+requirements-dev.txt
+requirements.txt

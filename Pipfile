@@ -27,3 +27,4 @@ pytest-env = "*"
 pbr = ">=3.0"
 cerberus = "*"
 apistar = {git = "https://github.com/encode/apistar.git", editable = true, ref = "level-up"}
+"e1839a8" = {path = ".", editable = true}

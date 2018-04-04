@@ -1,6 +1,6 @@
 [run]
 branch = True
-source = apistar-cerberus
+source = .
 omit =
   */.env/*,
   *apps.py,
