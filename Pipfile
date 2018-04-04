@@ -1,0 +1,29 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+
+
+[dev-packages]
+
+"flake8" = "*"
+yapf = "*"
+isort = "*"
+"autopep8" = "*"
+pytest = "*"
+pytest-cov = "*"
+tox = "*"
+pipenv-to-requirements = "*"
+"flake8-coding" = "*"
+"flake8-comprehensions" = "*"
+sphinx = "*"
+sphinx-autobuild = "*"
+pytest-pythonpath = "*"
+pytest-env = "*"
+
+
+[packages]
+
+pbr = ">=3.0"
+cerberus = "*"
+apistar = {git = "https://github.com/encode/apistar.git", editable = true, ref = "level-up"}
