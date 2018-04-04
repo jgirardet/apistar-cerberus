@@ -21,7 +21,7 @@ Add Cerberus type system in Apistar
 Features
 --------
 
-- Add ``Cerberus`` support to ``Apistar`` as type system validator via component system.
+- Add `Cerberus`_ support to `Apistar`_ as type system validator via component system.
 - Provides `CerberusComp` as Apistar component and `ApistarValidator` as base validator.
 
 
@@ -53,5 +53,5 @@ Usage
 - ApistarValidator also add a custom `update` to allow `validate(update=True)` to validator which is not yet supported by Cerberus. It's needed in Apistar because we don't have access to validation after instanciation.
 
 
-.. _`Cerberus`: https://github.com/pyeve/cerberus
 .. _`Apistar`: https://github.com/encode/apistar
+.. _Cerberus: https://github.com/pyeve/cerberus
