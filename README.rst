@@ -40,6 +40,7 @@ Usage
 
     # views.py
 
+    from apsistar_cerberus import ApistarValidator
     schema = {"some":"ceberus", "schema"; "here"}
 
     MyValidator = ApistarValidator(schema)
