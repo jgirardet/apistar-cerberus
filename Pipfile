@@ -1,4 +1,4 @@
-[[source]]
+	[[source]]
 
 url = "https://pypi.python.org/simple"
 verify_ssl = true
@@ -20,6 +20,7 @@ sphinx = "*"
 sphinx-autobuild = "*"
 pytest-pythonpath = "*"
 pytest-env = "*"
+twine = "*"
 
 
 [packages]

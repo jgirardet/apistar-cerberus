@@ -18,7 +18,7 @@ isort:
 	pipenv run isort -y
 
 yapf:
-	pipenv run yapf --recursive -i apistar_cerberus.py
+	pipenv run yapf --recursive -i apistar_cerberus
 
 checks:
 	pipenv check
@@ -57,8 +57,10 @@ sdist:
 wheels:
 	pipenv run python setup.py bdist_wheel
 
-deploy: build
-	twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
+deploy: build publish
+
+publish:
+	pipenv run twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
 
 update:
 	pipenv update -d
