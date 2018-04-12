@@ -5,7 +5,7 @@ import json
 # Third Party Libraries
 import cerberus
 from apistar import App, Route, TestClient
-from apistar_cerberus import CerberusComp, ApistarValidator
+from apistar_cerberus import ApistarValidator, CerberusComp
 
 schema = {
     "a": {

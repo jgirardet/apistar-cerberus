@@ -8,11 +8,11 @@ from apistar.server.validation import ValidatedRequestData
 
 
 class CerberusComp(Component):
+
     def can_handle_parameter(self, parameter: inspect.Parameter):
         return isinstance(parameter.annotation, cerberus.Validator)
 
-    def resolve(self, parameter: inspect.Parameter,
-                data: ValidatedRequestData):
+    def resolve(self, parameter: inspect.Parameter, data: ValidatedRequestData):
 
         v = parameter.annotation
         validated_data = v.validated(data)
@@ -23,6 +23,7 @@ class CerberusComp(Component):
 
 
 class ApistarValidator(cerberus.Validator):
+
     @property
     def __name__(self):
         return repr(self)
