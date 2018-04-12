@@ -15,7 +15,7 @@ install:
 script:
   - make check
   - make dist
-  - make doc
+  # - make doc
   - make test-coverage
 
 after_success:
